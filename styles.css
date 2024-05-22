@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=League+Spartan:wght@100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap");
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --light-red-a: hsla(0, 100%, 67%, 0.05);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --orangey-yellow-a: hsla(39, 100%, 56%, 0.05);
+  --green-teal: hsl(166, 100%, 37%);
+  --green-teal-a: hsla(166, 100%, 37%, 0.05);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --cobalt-blue-a: hsla(234, 85%, 45%, 0.05);
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavander: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  width: 650px;
+  box-shadow: 10px 10px 15px var(--pale-blue);
+  border-radius: 20px;
+}
+
+.result {
+  width: 50%;
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  color: var(--light-lavander);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.score {
+  border-radius: 100%;
+  width: 170px;
+  height: 170px;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.score h1 {
+  color: white;
+  font-size: 56px;
+}
+
+.result h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+.result h3 {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.summary {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--dark-gray-blue);
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+ul li {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.category {
+  display: flex;
+  gap: 10px;
+}
+
+.cat-score {
+  font-weight: 800;
+  color: gray;
+}
+
+.cat-score span {
+  color: var(--dark-gray-blue);
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  background-color: var(--dark-gray-blue);
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  margin-top: 40px;
+}
+
+button:active {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+.reaction {
+  color: var(--light-red);
+  background-color: var(--light-red-a);
+}
+
+.memory {
+  color: var(--orangey-yellow);
+  background-color: var(--orangey-yellow-a);
+}
+
+.verbal {
+  color: var(--green-teal);
+  background-color: var(--green-teal-a);
+}
+
+.visual {
+  color: var(--cobalt-blue);
+  background-color: var(--cobalt-blue-a);
+}
+
+@media (max-width: 700px) {
+  body {
+    justify-content: start;
+  }
+  .card {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+  .result {
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding-top: 20px;
+  }
+  .score {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 10px;
+  }
+  .score h1 {
+    font-size: 56px;
+  }
+  .result h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .summary {
+    width: 100%;
+  }
+}
