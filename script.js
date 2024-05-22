@@ -8,7 +8,7 @@ data.forEach(d => {
         <li class="${d.category.toLowerCase()}">
        <div class="category">
         <img
-            src="./assets/images/icon-${d.category}.svg"
+            src="./assets/images/icon-${d.category.toLowerCase()}.svg"
             alt="reaction"
             class="icon"
         />
